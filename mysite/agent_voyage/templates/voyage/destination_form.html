@@ -1,0 +1,18 @@
+{% extends "voyage/base.html" %}
+
+{% block content %}
+
+<h1>Ajouter un nouveau destination</h1>
+
+{% if statut %}
+    <p style="color: darkgreen;">Ce destination a bien été enregistré.</p>
+{% else %}
+    <p style="color: rgb(224, 13, 13);">Voyage non enregistrer !!!</p>
+{% endif %}
+
+<form method="POST">
+    {% csrf_token %}
+    {{dest_form.as_p}}
+    <button type="submit">Enregistrer</button>
+</form>
+{% endblock content%}

@@ -1,0 +1,40 @@
+{% extends "voyage/base.html" %}
+
+{% block content %}
+
+<article class="media content-section">
+    <div class="media-body">  
+   
+    <div class="article-metadata">
+        <h4 style="color:rgb(55, 105, 105);">{{excursionId.nom  | upper}}</h4>        
+       
+    </div>
+    <div class="col-md-4">
+        <p >
+            <img style="width : 300px;vertical-align:top;" src="{{excursionId.photo.url}}" alt="">
+            <br> Duree : {{excursionId.duree}}h
+            <br>Prix : {{excursionId.prix}} Fcfa
+            <br>Pays : {{excursionId.destinations.pays}}
+            <p style="text-align: justify; width: 600px;"> Le Teide est un stratovolcan situé sur l'île de Tenerife, dans l'archipel des îles Canaries, à l'ouest des côtes d'Afrique du Nord. D'une altitude de 3 715 m,
+                 il est le point culminant d'Espagne, le plus haut sommet dans l'océan Atlantique et 
+                 la troisième plus haute structure volcanique au monde si on mesure depuis le fond 
+                 marin. Le volcanisme des îles Canaries et du Teide est dû à la présence d'un point 
+                 chaud. La formation de Tenerife commence il y a 12 Ma, mais le volcanisme sur l'île 
+                 est toujours actif, l'éruption la plus récente datant de 1909. La formation de 
+                 l'édifice du Teide commence il y a 200 000 ans, immédiatement après l'effondrement 
+                 vers le nord d'un édifice volcanique plus ancien, formant la caldeira asymétrique de 
+                 las Cañadas. Du fait de la différenciation magmatique, les laves du Teide sont 
+                 felsiques et les éruptions sont relativement explosives. Sa dernière éruption 
+                 remonte approximativement à l'an 800, les éruptions plus récentes sur l'île étant 
+                 dues aux rifts radiaux et étant majoritairement effusives.
+            </p>
+            
+        </p>
+           
+            
+      </div>
+</div>
+
+</article>
+
+{% endblock content%}

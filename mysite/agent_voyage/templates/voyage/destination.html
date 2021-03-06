@@ -1,0 +1,29 @@
+{% extends "voyage/base.html" %}
+
+{% block content %}
+
+
+<article class="media content-section">
+    <div class="media-body">  
+   
+    <div class="article-metadata">
+        <h4 style="color:rgb(55, 105, 105);"> {{destId.destinations.pays | upper}}</h4>        
+       
+    </div>
+    <div class="col-md-4">
+        <p >
+            <img style="width : 300px;vertical-align:top;" src="{{destId.photo.url}}" alt="">
+            <br> Duree : {{destId.duree}}h
+            <br>Prix : {{destId.prix}} Fcfa
+          
+            
+        </p>
+           
+            
+      </div>
+</div>
+
+</article>
+
+{% endblock content%}
+

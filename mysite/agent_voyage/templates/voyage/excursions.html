@@ -1,0 +1,22 @@
+{% extends "voyage/base.html" %}
+
+{% block content %}
+
+{% for v in voyage %}
+{% for ex in v.excursions.all %}
+<article class="media content-section" id="article" >
+    <div class="media-body">  
+   
+    <div class="article-metadata">
+        <h4 style="color:rgb(55, 105, 105);">{{ex.nom  | upper}}</h4>        
+       
+    </div>
+    <p style="font-size: x-large;"><a href="{% url 'agence_voyage-voyage' v.id %}">{{v.nom}}</a></p>
+    
+    
+</div>
+</article>
+{% endfor %}
+{% endfor %}
+
+{% endblock content%}

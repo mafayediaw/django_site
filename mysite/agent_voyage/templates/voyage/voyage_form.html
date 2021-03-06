@@ -1,0 +1,19 @@
+{% extends "voyage/base.html" %}
+
+{% block content %}
+
+<h1>Ajouter un nouveau voyage</h1>
+
+{% if statut %}
+    <p >Ce voyage a bien été enregistré.</p>
+{% else %}
+    <p>Voyage non enregistrer !!!</p>
+{% endif %}
+
+
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{voyage_form.as_p}}
+    <button type="submit">Enregistrer</button>
+</form>
+{% endblock content%}
